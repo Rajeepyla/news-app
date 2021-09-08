@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <h4 style="text-align: center; color: cornflowerblue;"> Top HeadLines </h4>
+    <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+        placeholder="&#61442;  Start searching ">
+    </div>
+    <div class="row">
+    <div *ngFor="let news of navbarDisplay | filter:searchText" class="col-lg-3 mt-3 mb-3">
+      <div class="box">
+        <img src="{{news.urlToImage}}" width="100%">
+        <h5 class="mt-2 mb-2">{{news.title}}</h5>
+        <a href="{{news.url}}" target="_blank" class="btn btn-dark btn-sm mt-2">Read more</a>
+      </div>
+    </div>
+    </div>
+
+ </div>
